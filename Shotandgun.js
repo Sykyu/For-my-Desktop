@@ -1,15 +1,1 @@
-var ws = WScript.CreateObject("WScript.Shell");
-ws.SendKeys( "% n" );
-var jpegname = "‰æ‘œ" + (new Date()).getTime() + ".jpeg";
-var out = WScript.CreateObject("ADODB.Stream");
-out.Type = 1;
-out.Open();
-out.SaveToFile( jpegname, 2 );
-out.Close();
-var mspaint = ws.Run("mspaint.exe " + jpegname, 3);
-WScript.sleep(250);
-var ret = ws.AppActivate( mspaint );
-ws.SendKeys( "^v" ); 
-ws.SendKeys( "^s" ); 
-WScript.sleep(250);
-ws.SendKeys( "%{F4}" ); 
+'---- dead code ------
